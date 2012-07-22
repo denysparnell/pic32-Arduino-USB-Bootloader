@@ -6,7 +6,7 @@
 
 # Macros
 TOP=`pwd`
-CND_CONF=UBW32_MX460
+CND_CONF=Microchip_USB_Starter_Kit
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging

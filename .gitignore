@@ -1,3 +1,6 @@
 *.elf
 *.zip
-
+*.o
+*.d
+*.hex
+*.map

@@ -6,7 +6,7 @@
 
 # Macros
 TOP=`pwd`
-CND_CONF=UBW32_MX460
+CND_CONF=Cerebot_MX7
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging

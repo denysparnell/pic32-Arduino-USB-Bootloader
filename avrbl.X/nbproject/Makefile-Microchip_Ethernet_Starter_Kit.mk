@@ -10,8 +10,8 @@
 # Include project Makefile
 include Makefile
 # Include makefile containing local settings
-ifeq "$(wildcard nbproject/Makefile-local-UBW32_MX795.mk)" "nbproject/Makefile-local-UBW32_MX795.mk"
-include nbproject/Makefile-local-UBW32_MX795.mk
+ifeq "$(wildcard nbproject/Makefile-local-Microchip_Ethernet_Starter_Kit.mk)" "nbproject/Makefile-local-Microchip_Ethernet_Starter_Kit.mk"
+include nbproject/Makefile-local-Microchip_Ethernet_Starter_Kit.mk
 endif
 
 # Environment
@@ -21,7 +21,7 @@ MV=mv
 CP=cp 
 
 # Macros
-CND_CONF=UBW32_MX795
+CND_CONF=Microchip_Ethernet_Starter_Kit
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 IMAGE_TYPE=debug
 OUTPUT_SUFFIX=elf
@@ -62,7 +62,7 @@ LDLIBSOPTIONS=
 FIXDEPS=fixDeps
 
 .build-conf:  ${BUILD_SUBPROJECTS}
-	${MAKE}  -f nbproject/Makefile-UBW32_MX795.mk dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+	${MAKE}  -f nbproject/Makefile-Microchip_Ethernet_Starter_Kit.mk dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
 MP_PROCESSOR_OPTION=32MX795F512L
 MP_LINKER_FILE_OPTION=,--script="../boot-linkerscript.ld"
@@ -84,63 +84,63 @@ ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 ${OBJECTDIR}/_ext/592584297/cdcacm.o: ../sources/cdcacm.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/cdcacm.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/cdcacm.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_UBW32_MX795_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/cdcacm.o.d" -o ${OBJECTDIR}/_ext/592584297/cdcacm.o ../sources/cdcacm.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/cdcacm.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_PIC32_ETHERNET_STARTER_KIT_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/cdcacm.o.d" -o ${OBJECTDIR}/_ext/592584297/cdcacm.o ../sources/cdcacm.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/flash.o: ../sources/flash.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/flash.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/flash.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_UBW32_MX795_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/flash.o.d" -o ${OBJECTDIR}/_ext/592584297/flash.o ../sources/flash.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/flash.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_PIC32_ETHERNET_STARTER_KIT_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/flash.o.d" -o ${OBJECTDIR}/_ext/592584297/flash.o ../sources/flash.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/main.o: ../sources/main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/main.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/main.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_UBW32_MX795_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/main.o.d" -o ${OBJECTDIR}/_ext/592584297/main.o ../sources/main.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/main.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_PIC32_ETHERNET_STARTER_KIT_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/main.o.d" -o ${OBJECTDIR}/_ext/592584297/main.o ../sources/main.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o: ../sources/pic32bootloaderusb.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_UBW32_MX795_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d" -o ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o ../sources/pic32bootloaderusb.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_PIC32_ETHERNET_STARTER_KIT_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d" -o ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o ../sources/pic32bootloaderusb.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/usb.o: ../sources/usb.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/usb.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/usb.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_UBW32_MX795_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/usb.o.d" -o ${OBJECTDIR}/_ext/592584297/usb.o ../sources/usb.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/usb.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_PIC32_ETHERNET_STARTER_KIT_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/usb.o.d" -o ${OBJECTDIR}/_ext/592584297/usb.o ../sources/usb.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/util.o: ../sources/util.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/util.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/util.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_UBW32_MX795_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/util.o.d" -o ${OBJECTDIR}/_ext/592584297/util.o ../sources/util.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/util.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_PIC32_ETHERNET_STARTER_KIT_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/util.o.d" -o ${OBJECTDIR}/_ext/592584297/util.o ../sources/util.c   -fno-builtin
 	
 else
 ${OBJECTDIR}/_ext/592584297/cdcacm.o: ../sources/cdcacm.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/cdcacm.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/cdcacm.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_UBW32_MX795_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/cdcacm.o.d" -o ${OBJECTDIR}/_ext/592584297/cdcacm.o ../sources/cdcacm.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/cdcacm.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_PIC32_ETHERNET_STARTER_KIT_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/cdcacm.o.d" -o ${OBJECTDIR}/_ext/592584297/cdcacm.o ../sources/cdcacm.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/flash.o: ../sources/flash.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/flash.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/flash.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_UBW32_MX795_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/flash.o.d" -o ${OBJECTDIR}/_ext/592584297/flash.o ../sources/flash.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/flash.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_PIC32_ETHERNET_STARTER_KIT_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/flash.o.d" -o ${OBJECTDIR}/_ext/592584297/flash.o ../sources/flash.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/main.o: ../sources/main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/main.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/main.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_UBW32_MX795_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/main.o.d" -o ${OBJECTDIR}/_ext/592584297/main.o ../sources/main.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/main.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_PIC32_ETHERNET_STARTER_KIT_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/main.o.d" -o ${OBJECTDIR}/_ext/592584297/main.o ../sources/main.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o: ../sources/pic32bootloaderusb.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_UBW32_MX795_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d" -o ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o ../sources/pic32bootloaderusb.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_PIC32_ETHERNET_STARTER_KIT_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d" -o ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o ../sources/pic32bootloaderusb.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/usb.o: ../sources/usb.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/usb.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/usb.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_UBW32_MX795_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/usb.o.d" -o ${OBJECTDIR}/_ext/592584297/usb.o ../sources/usb.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/usb.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_PIC32_ETHERNET_STARTER_KIT_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/usb.o.d" -o ${OBJECTDIR}/_ext/592584297/usb.o ../sources/usb.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/util.o: ../sources/util.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/util.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/util.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_UBW32_MX795_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/util.o.d" -o ${OBJECTDIR}/_ext/592584297/util.o ../sources/util.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/util.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_PIC32_ETHERNET_STARTER_KIT_ -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/util.o.d" -o ${OBJECTDIR}/_ext/592584297/util.o ../sources/util.c   -fno-builtin
 	
 endif
 
@@ -167,8 +167,8 @@ endif
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
-	${RM} -r build/UBW32_MX795
-	${RM} -r dist/UBW32_MX795
+	${RM} -r build/Microchip_Ethernet_Starter_Kit
+	${RM} -r dist/Microchip_Ethernet_Starter_Kit
 
 # Enable dependency checking
 .dep.inc: .depcheck-impl

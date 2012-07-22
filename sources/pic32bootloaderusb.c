@@ -106,6 +106,25 @@
 	// our PRG switch
 	#define PRGTRIS				TRISAbits.TRISA10
 	#define PRGPORT				PORTAbits.RA10
+#elif defined(_BOARD_HMI_)
+
+#define LED1TRIS  TRISGbits.TRISG13  // RG13
+#define LED1LAT  LATGbits.LATG13     // RG13
+#define LED2TRIS  TRISGbits.TRISG14  // RG14
+#define LED2LAT  LATGbits.LATG14     // RG14
+#define	PRGSWITCH 0	//*	PRGSWITCH active low
+#define PRGTRIS  TRISFbits.TRISF13  // RF13 SPI SCK
+#define PRGPORT  PORTFbits.RF13     // RF13
+
+#elif defined(_BOARD_CANIO_)
+
+#define LED1TRIS  TRISCbits.TRISC1   // RC1
+#define LED1LAT   LATCbits.LATC1     //
+#define LED2TRIS  TRISCbits.TRISC2   // RC2
+#define LED2LAT   LATCbits.LATC2     //
+#define	PRGSWITCH 0	//*	PRGSWITCH active low
+#define PRGTRIS  TRISFbits.TRISF13  // RF13 SPI SCK
+#define PRGPORT  PORTFbits.RF13     // RF13
 
 #else
 	#define	LEDTRIS				TRISEbits.TRISE0	// RE0
@@ -691,8 +710,12 @@ void	avrbl_run(void)
 #endif
 
 	// configure the heartbeat LED
+#ifdef LED1TRIS
+        LED1TRIS = 0;
+        LED2TRIS = 0;
+#else
 	LEDTRIS	=	0;
-
+#endif
 
 #ifdef _DEBUG_VIA_SERIAL_
 	Serial_begin(kDEBUG_BAUD_RATE);
@@ -725,8 +748,13 @@ void	avrbl_run(void)
 			// blink the heartbeat LED with the specified pattern
 			//			LEDLAT	=	!!(bits & LEDBLINK) ^ LEDXOR;
 			//*	just blink, no need for any silly pattern
+#ifdef LED1LAT
+                                  // blink the heartbeat LED
+                        LED1LAT = (gLoops/LED_BLINK_LOOPS)%2 && ((gLoops/LED_BLINK_LOOPS)%8<6);
+                        LED2LAT = (gLoops/LED_BLINK_LOOPS)%3 && ((gLoops/LED_BLINK_LOOPS)%8<7);
+#else
 			LEDLAT	=	(gLoops / LED_BLINK_LOOPS) % 2;
-
+#endif
 		#ifndef PRGSWITCH
 			// if we've been here too long without stk500v2 becoming active...
 			if (gLoops >= AVRBL_LOOPS && !gActive)
