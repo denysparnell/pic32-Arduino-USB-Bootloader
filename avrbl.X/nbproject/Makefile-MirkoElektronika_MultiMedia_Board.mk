@@ -9,12 +9,10 @@
 
 # Include project Makefile
 include Makefile
-# Include makefile containing local settings
-ifeq "$(wildcard nbproject/Makefile-local-MirkoElektronika_MultiMedia_Board.mk)" "nbproject/Makefile-local-MirkoElektronika_MultiMedia_Board.mk"
-include nbproject/Makefile-local-MirkoElektronika_MultiMedia_Board.mk
-endif
 
 # Environment
+# Adding MPLAB X bin directory to path
+PATH:=/Applications/microchip/mplabx/mplab_ide.app/Contents/Resources/mplab_ide/mplab_ide/modules/../../bin/:$(PATH)
 MKDIR=mkdir -p
 RM=rm -f 
 MV=mv 
@@ -52,14 +50,29 @@ CFLAGS=
 ASFLAGS=
 LDLIBSOPTIONS=
 
+# Path to java used to run MPLAB X when this makefile was created
+MP_JAVA_PATH="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/"
+OS_CURRENT="$(shell uname -s)"
 ############# Tool locations ##########################################
 # If you copy a project from one host to another, the path where the  #
 # compiler is installed may be different.                             #
 # If you open this project with MPLAB X in the new host, this         #
 # makefile will be regenerated and the paths will be corrected.       #
 #######################################################################
+MP_CC="/Applications/microchip/mplabc32/v1.11a/bin/pic32-gcc"
+# MP_BC is not defined
+MP_AS="/Applications/microchip/mplabc32/v1.11a/bin/pic32-as"
+MP_LD="/Applications/microchip/mplabc32/v1.11a/bin/pic32-ld"
+MP_AR="/Applications/microchip/mplabc32/v1.11a/bin/pic32-ar"
+DEP_GEN=${MP_JAVA_PATH}java -jar "/Applications/microchip/mplabx/mplab_ide.app/Contents/Resources/mplab_ide/mplab_ide/modules/../../bin/extractobjectdependencies.jar" 
 # fixDeps replaces a bunch of sed/cat/printf statements that slow down the build
 FIXDEPS=fixDeps
+MP_CC_DIR="/Applications/microchip/mplabc32/v1.11a/bin"
+# MP_BC_DIR is not defined
+MP_AS_DIR="/Applications/microchip/mplabc32/v1.11a/bin"
+MP_LD_DIR="/Applications/microchip/mplabc32/v1.11a/bin"
+MP_AR_DIR="/Applications/microchip/mplabc32/v1.11a/bin"
+# MP_BC_DIR is not defined
 
 .build-conf:  ${BUILD_SUBPROJECTS}
 	${MAKE}  -f nbproject/Makefile-MirkoElektronika_MultiMedia_Board.mk dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
@@ -147,13 +160,13 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: link
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
+dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC} $(MP_EXTRA_LD_PRE)  -mdebugger -D__MPLAB_DEBUGGER_ICD3=1 -mprocessor=$(MP_PROCESSOR_OPTION)  -o dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}       -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=__MPLAB_DEBUG=1,--defsym=__ICD2RAM=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_ICD3=1,--defsym=_min_heap_size=0,--defsym=_min_stack_size=3072,--gc-sections,-L"../../../../Program Files/Microchip/MPLAB C32/lib",-L"../../../../Program Files/Microchip/MPLAB C32/pic32mx/lib",-Map="$(BINDIR_)$(TARGETBASE).map" 
+	${MP_CC} $(MP_EXTRA_LD_PRE)  -mdebugger -D__MPLAB_DEBUGGER_ICD3=1 -mprocessor=$(MP_PROCESSOR_OPTION)  -o dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}        -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=__MPLAB_DEBUG=1,--defsym=__ICD2RAM=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_ICD3=1,--defsym=_min_heap_size=0,--defsym=_min_stack_size=3072,--gc-sections,-L"../../../../Program Files/Microchip/MPLAB C32/lib",-L"../../../../Program Files/Microchip/MPLAB C32/pic32mx/lib",-Map="$(BINDIR_)$(TARGETBASE).map" 
 else
-dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
+dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC} $(MP_EXTRA_LD_PRE)  -mprocessor=$(MP_PROCESSOR_OPTION)  -o dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}       -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=_min_heap_size=0,--defsym=_min_stack_size=3072,--gc-sections,-L"../../../../Program Files/Microchip/MPLAB C32/lib",-L"../../../../Program Files/Microchip/MPLAB C32/pic32mx/lib",-Map="$(BINDIR_)$(TARGETBASE).map"
+	${MP_CC} $(MP_EXTRA_LD_PRE)  -mprocessor=$(MP_PROCESSOR_OPTION)  -o dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}        -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=_min_heap_size=0,--defsym=_min_stack_size=3072,--gc-sections,-L"../../../../Program Files/Microchip/MPLAB C32/lib",-L"../../../../Program Files/Microchip/MPLAB C32/pic32mx/lib",-Map="$(BINDIR_)$(TARGETBASE).map"
 	${MP_CC_DIR}/pic32-bin2hex dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  
 endif
 
@@ -161,19 +174,15 @@ endif
 # Subprojects
 .build-subprojects:
 
-
-# Subprojects
-.clean-subprojects:
-
 # Clean Targets
-.clean-conf: ${CLEAN_SUBPROJECTS}
+.clean-conf:
 	${RM} -r build/MirkoElektronika_MultiMedia_Board
 	${RM} -r dist/MirkoElektronika_MultiMedia_Board
 
 # Enable dependency checking
 .dep.inc: .depcheck-impl
 
-DEPFILES=$(shell "${PATH_TO_IDE_BIN}"mplabwildcard ${POSSIBLE_DEPFILES})
+DEPFILES=$(shell "/Applications/microchip/mplabx/mplab_ide.app/Contents/Resources/mplab_ide/mplab_ide/modules/../../bin/"mplabwildcard ${POSSIBLE_DEPFILES})
 ifneq (${DEPFILES},)
 include ${DEPFILES}
 endif

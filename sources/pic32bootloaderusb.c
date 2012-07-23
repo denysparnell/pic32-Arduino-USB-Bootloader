@@ -112,9 +112,9 @@
 #define LED1LAT  LATGbits.LATG13     // RG13
 #define LED2TRIS  TRISGbits.TRISG14  // RG14
 #define LED2LAT  LATGbits.LATG14     // RG14
-#define	PRGSWITCH 0	//*	PRGSWITCH active low
-#define PRGTRIS  TRISFbits.TRISF13  // RF13 SPI SCK
-#define PRGPORT  PORTFbits.RF13     // RF13
+#define	PRGSWITCH 0                  //*	PRGSWITCH active low
+#define PRGTRIS  TRISAbits.TRISA1    // RA1
+#define PRGPORT  PORTAbits.RA1       // RA1
 
 #elif defined(_BOARD_CANIO_)
 
@@ -122,9 +122,9 @@
 #define LED1LAT   LATCbits.LATC1     //
 #define LED2TRIS  TRISCbits.TRISC2   // RC2
 #define LED2LAT   LATCbits.LATC2     //
-#define	PRGSWITCH 0	//*	PRGSWITCH active low
-#define PRGTRIS  TRISFbits.TRISF13  // RF13 SPI SCK
-#define PRGPORT  PORTFbits.RF13     // RF13
+#define	PRGSWITCH 0	             //*	PRGSWITCH active low
+#define PRGTRIS  TRISFbits.TRISF13   // RF13 SPI SCK
+#define PRGPORT  PORTFbits.RF13      // RF13
 
 #else
 	#define	LEDTRIS				TRISEbits.TRISE0	// RE0

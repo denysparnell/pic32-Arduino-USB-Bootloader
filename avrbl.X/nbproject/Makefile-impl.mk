@@ -43,40 +43,6 @@ ALLCONFS=HMI CANIO default UBW32_MX460 UBW32_MX795 CUI32_MX440 Cerebot_MX4 Cereb
 .clean-impl: .clean-pre
 	${MAKE} -f nbproject/Makefile-${CONF}.mk SUBPROJECTS=${SUBPROJECTS} .clean-conf
 
-# clobber
-.clobber-impl: .clobber-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=HMI clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=CANIO clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=UBW32_MX460 clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=UBW32_MX795 clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=CUI32_MX440 clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Cerebot_MX4 clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Cerebot_MX7 clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Microchip_USB_Starter_Kit clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Microchip_Ethernet_Starter_Kit clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=MirkoElektronika_mikroMedia_Board clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=MirkoElektronika_MultiMedia_Board clean
-
-
-
-# all
-.all-impl: .all-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=HMI build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=CANIO build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=UBW32_MX460 build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=UBW32_MX795 build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=CUI32_MX440 build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Cerebot_MX4 build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Cerebot_MX7 build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Microchip_USB_Starter_Kit build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Microchip_Ethernet_Starter_Kit build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=MirkoElektronika_mikroMedia_Board build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=MirkoElektronika_MultiMedia_Board build
-
-
-
 # dependency checking support
 .depcheck-impl:
 #	@echo "# This code depends on make tool being used" >.dep.inc
